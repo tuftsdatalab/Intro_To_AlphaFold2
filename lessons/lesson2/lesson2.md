@@ -2,6 +2,6 @@
 
 ___________________________________________________________________________________________________________________________________________________________________________________
 
-Next Lesson: [AlphaFold2 Output](lessons/lesson3/lesson3.md)
+Next Lesson: [AlphaFold2 Output](../lesson3/lesson3.md)
 
-Previous: [Introduction to AlphaFold2](lessons/lesson1/AlphaFold2_Tutorial.pdf)
+Previous: [Introduction to AlphaFold2](../lesson1/AlphaFold2_Tutorial.pdf)
