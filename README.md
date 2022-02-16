@@ -22,7 +22,7 @@ This course gives a high level overview of the AlphaFold 2 algorithm with the go
 
 ## Table Of Contents
 
-- [Introduction to AlphaFold2](lessons/lesson1/AlphaFold 2 Tutorial.pdf)
+- [Introduction to AlphaFold2](lessons/lesson1/AlphaFold2_Tutorial.pdf)
 - [Preparing the Batch Script](lessons/lesson2/lesson2.md)
 - [AlphaFold2 Output](lessons/lesson3/lesson3.md)
 - [Plot AlphaFold2 Results](lessons/lesson4/lesson4.md)
