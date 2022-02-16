@@ -1,4 +1,4 @@
-# [IntroToAlphaFold2](./README.md)
+# [Introduction To AlphaFold2](./README.md)
 
 ## Description 
 
