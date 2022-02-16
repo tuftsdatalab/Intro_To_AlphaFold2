@@ -1,4 +1,3 @@
-# [Introduction To AlphaFold2](./README.md)
 
 ## Description 
 
