@@ -38,6 +38,7 @@ However, a program like AlphaFold might take much longer and require more memory
 ![](images/srun_v_sbatch.PNG)
 
 ## Prepare the Batch Script
+
 ```
 #!/bin/bash
 #SBATCH -p preempt  #if you don't have ccgpu access, use "preempt"
@@ -52,8 +53,8 @@ However, a program like AlphaFold might take much longer and require more memory
 
 module load alphafold/2.1.1
 nvidia-smi
-module help alphafold/2.1.1 
-#this command will print out all input options for "runaf2"command
+
+
 #Please use your own path/value for the following variables
 #Make sure to specify the outputpath to a path that you have write permission
 mkdir /cluster/home/jlaird01/alphaFoldTest/afTest2
