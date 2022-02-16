@@ -39,30 +39,36 @@ However, a program like AlphaFold might take much longer and require more memory
 
 ## Prepare the Batch Script
 
+A batch script can be broken into two parts - the header section with information on how to run the job and a command section where we use UNIX commnads to do a job. Her is our header section:
+
 ```
 #!/bin/bash
-#SBATCH -p preempt  #if you don't have ccgpu access, use "preempt"
-#SBATCH -n 8    # 8 cpu cores
-#SBATCH --mem=64g       #64GB of RAM
-#SBATCH --time=2-0      #run 2 days, up to 7 days "7-00:00:00"
-#SBATCH -o output.%j
-#SBATCH -e error.%j
-#SBATCH -N 1
-#SBATCH --gres=gpu:1    # number of GPUs. please follow instructions in Pax User Guidewhen submit jobs to different partition and selecting different GPU architectures.
-#SBATCH --exclude=c1cmp[025-026] #avoid using K20xm
+#SBATCH -p ccgpu  # The partition we are requesting, and if you don't have ccgpu access, use "preempt"
+#SBATCH -n 8    # The number of cpu cores we would like - here it is 8
+#SBATCH --mem=64g       # The amount of RAM we would like - here it is 64 Gigabytes
+#SBATCH --time=2-0      # The time we think our job will take - here we say 2 days (days-hours:minutes:seconds)
+#SBATCH -o output.%j    # The name of the output file - here it is "output.jobID"
+#SBATCH -e error.%j    # The name of the error file - here it is "error.jobID"
+#SBATCH -N 1    # The number of nodes we would like - here it is 1
+#SBATCH --gres=gpu:1    # The number of GPUs - here we ask for 1
+#SBATCH --exclude=c1cmp[025-026] #These are nodes to exclude when using AlphaFold2
+```
+Here we request: the ccgpu partition, 8 cpu cores, 64G of RAM, 2 days, an output file, an error file, 1 node 1 GPU, and not to use nodes c1cmp[025-026]. Now that we have a header section we can specify our commnands to run AlphaFold2:
 
+```
+# Load the AlphaFold2 and NVIDIA modules
 module load alphafold/2.1.1
 nvidia-smi
 
-
-#Please use your own path/value for the following variables
-#Make sure to specify the outputpath to a path that you have write permission
-mkdir /cluster/home/jlaird01/alphaFoldTest/afTest2
+# Make the Res
+mkdir /cluster/home/your/alphaFoldTest/afTest2
 outputpath=/cluster/home/jlaird01/alphaFoldTest/afTest2
 fastapath=/cluster/home/jlaird01/alphaFoldTest/hsp90.fasta
 maxtemplatedate=2020-06-10
+
 source activate alphafold2.1.1
-#running alphafold 2.1.1
+
+# Running alphafold 2.1.1
 runaf2 -o $outputpath -f $fastapath -t $maxtemplatedate
 ```
 _________________________________________________________________________________________________________________________________________________________________________________
