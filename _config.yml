@@ -1,0 +1,12 @@
+
+title: [Introduction to AlphaFold2]
+description: [A Tufts University Research Technology Workshop]
+
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - lessons/
