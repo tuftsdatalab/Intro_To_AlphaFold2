@@ -25,8 +25,9 @@ Now that we are at a login node we need to get to a compute node to get our job 
 
 Where:
 
-|`srun`|SLURM command to run a parallel job|
+|`command`|description|
 |-|-|
+|`srun`|SLURM command to run a parallel job|
 |`--pty`| get a pseudo terminal|
 |`-t` | time we need here we request 3 hours|
 |`--mem` | memory we need here we request 16 Gigabytes|
@@ -43,17 +44,31 @@ A batch script can be broken into two parts - the header section with informatio
 
 ```
 #!/bin/bash
-#SBATCH -p ccgpu  # The partition we are requesting, and if you don't have ccgpu access, use "preempt"
-#SBATCH -n 8    # The number of cpu cores we would like - here it is 8
-#SBATCH --mem=64g       # The amount of RAM we would like - here it is 64 Gigabytes
-#SBATCH --time=2-0      # The time we think our job will take - here we say 2 days (days-hours:minutes:seconds)
-#SBATCH -o output.%j    # The name of the output file - here it is "output.jobID"
-#SBATCH -e error.%j    # The name of the error file - here it is "error.jobID"
-#SBATCH -N 1    # The number of nodes we would like - here it is 1
-#SBATCH --gres=gpu:1    # The number of GPUs - here we ask for 1
-#SBATCH --exclude=c1cmp[025-026] #These are nodes to exclude when using AlphaFold2
+#SBATCH -p ccgpu  
+#SBATCH -n 8   
+#SBATCH --mem=64g 
+#SBATCH --time=2-0      
+#SBATCH -o output.%j 
+#SBATCH -e error.%j   
+#SBATCH -N 1   
+#SBATCH --gres=gpu:1  
+#SBATCH --exclude=c1cmp[025-026] 
 ```
-Here we request: the ccgpu partition, 8 cpu cores, 64G of RAM, 2 days, an output file, an error file, 1 node 1 GPU, and not to use nodes c1cmp[025-026]. Now that we have a header section we can specify our commnands to run AlphaFold2:
+The `#SBATCH` commands above do the following:
+
+|`command`|description|
+|-|-|
+|`#!/bin/bash`|specify our script is a bash script|
+|`#SBATCH -p ccgpu`| The partition we are requesting, and if you don't have ccgpu access, use "preempt"|
+|`#SBATCH -n 8` | The number of cpu cores we would like - here it is 8|
+|`#SBATCH --mem=64g ` |The amount of RAM we would like - here it is 64 Gigabytes|
+|`#SBATCH --time=2-0` | The time we think our job will take - here we say 2 days (days-hours:minutes:seconds)|
+|`#SBATCH -o output.%j` |The name of the output file - here it is "output.jobID"|
+|`#SBATCH -N 1`|The number of nodes we would like - here it is 1|
+|`#SBATCH --gres=gpu:1 `|The number of GPUs - here we ask for 1|
+|`#SBATCH --exclude=c1cmp[025-026]`|These are nodes to exclude when using AlphaFold2|
+
+Now that we have a header section we can specify our commnands to run AlphaFold2:
 
 ```
 # Load the AlphaFold2 and NVIDIA modules
