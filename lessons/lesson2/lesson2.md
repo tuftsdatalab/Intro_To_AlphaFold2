@@ -39,7 +39,7 @@ However, a program like AlphaFold might take much longer and require more memory
 
 ## Prepare the Batch Script
 
-A batch script can be broken into two parts - the header section with information on how to run the job and a command section where we use UNIX commnads to do a job. Her is our header section:
+A batch script can be broken into two parts - the header section with information on how to run the job and a command section where we use UNIX commnads to do a job. Here is our header section:
 
 ```
 #!/bin/bash
@@ -60,10 +60,14 @@ Here we request: the ccgpu partition, 8 cpu cores, 64G of RAM, 2 days, an output
 module load alphafold/2.1.1
 nvidia-smi
 
-# Make the Res
-mkdir /cluster/home/your/alphaFoldTest/afTest2
-outputpath=/cluster/home/jlaird01/alphaFoldTest/afTest2
-fastapath=/cluster/home/jlaird01/alphaFoldTest/hsp90.fasta
+# Make the results direcory
+mkdir /path/to/your/home/directory/af2
+
+# Specify where your output directory and raw data are
+outputpath=/path/to/your/home/directory/af2
+fastapath=/path/to/your/home/directory/data/hsp90.fasta
+
+# 
 maxtemplatedate=2020-06-10
 
 source activate alphafold2.1.1
@@ -71,6 +75,7 @@ source activate alphafold2.1.1
 # Running alphafold 2.1.1
 runaf2 -o $outputpath -f $fastapath -t $maxtemplatedate
 ```
+In the command section we first load our `alphafold/2.1.1` and `nvidia-smi` modules. We then make an output directory for our alphafold results. Next we specify where we want our results to be stored and where our fasta file input is.
 _________________________________________________________________________________________________________________________________________________________________________________
 
 Next Lesson: [AlphaFold2 Output](../lesson3/lesson3.md)
