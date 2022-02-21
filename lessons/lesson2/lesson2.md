@@ -82,7 +82,7 @@ mkdir /path/to/your/home/directory/af2
 outputpath=/path/to/your/home/directory/af2
 fastapath=/path/to/your/home/directory/data/hsp90.fasta
 
-# 
+# Date to specify if you want to avoid using template
 maxtemplatedate=2020-06-10
 
 source activate alphafold2.1.1
@@ -90,7 +90,7 @@ source activate alphafold2.1.1
 # Running alphafold 2.1.1
 runaf2 -o $outputpath -f $fastapath -t $maxtemplatedate
 ```
-In the command section we first load our `alphafold/2.1.1` and `nvidia-smi` modules. We then make an output directory for our alphafold results. Next we specify where we want our results to be stored and where our fasta file input is.
+In the command section we first load our `alphafold/2.1.1` and `nvidia-smi` modules. We then make an output directory for our alphafold results. Next we specify where we want our results to be stored and where our fasta file input is. The `max`
 _________________________________________________________________________________________________________________________________________________________________________________
 
 Next Lesson: [AlphaFold2 Output](../lesson3/lesson3.md)
