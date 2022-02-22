@@ -80,7 +80,7 @@ mkdir /path/to/your/home/directory/af2
 
 # Specify where your output directory and raw data are
 outputpath=/path/to/your/home/directory/af2
-fastapath=/path/to/your/home/directory/data/hsp90.fasta
+fastapath=/path/to/your/home/directory/data/1AXC.fasta
 
 # Date to specify if you want to avoid using template
 maxtemplatedate=2020-06-10
@@ -88,9 +88,45 @@ maxtemplatedate=2020-06-10
 source activate alphafold2.1.1
 
 # Running alphafold 2.1.1
-runaf2 -o $outputpath -f $fastapath -t $maxtemplatedate
+runaf2 -o $outputpath -f $fastapath -t $maxtemplatedate -m multimer 
 ```
-In the command section we first load our `alphafold/2.1.1` and `nvidia-smi` modules. We then make an output directory for our alphafold results. Next we specify where we want our results to be stored and where our fasta file input is. The `max`
+In the command section we first load our `alphafold/2.1.1` and `nvidia-smi` modules. We then make an output directory for our alphafold results. Next we specify where we want our results to be stored and where our fasta file input is. The `maxtemplatedate` option is a bit more complicated. If we ask AlphaFold to predict the structure of a protein with a structure **already** in the [Protein Data Bank (PDB)](https://www.rcsb.org/) - then we have the option of using that structure in the prediction. If we do not want AlphaFold 2 to use this structure in the prediction we need to specify a date **before** the release date of that structure. After specifying a release date we activate the alphafold conda environment with `source activate alphafold2.1.1`. Now that we have an activated environment we can run the alplhafold command runaf2 with our specifications.  You'll note the output file path, input fasta file path, and max template date are noted. If you are trying to predict a multimeric protein, specify this with the `-m multimer` option.
+
+Putting this all together your overall batch script will look like this:
+
+```
+#!/bin/bash
+#SBATCH -p ccgpu  
+#SBATCH -n 8   
+#SBATCH --mem=64g 
+#SBATCH --time=2-0      
+#SBATCH -o output.%j 
+#SBATCH -e error.%j   
+#SBATCH -N 1   
+#SBATCH --gres=gpu:1  
+#SBATCH --exclude=c1cmp[025-026] 
+# Load the AlphaFold2 and NVIDIA modules
+module load alphafold/2.1.1
+nvidia-smi
+
+# Make the results direcory
+mkdir /path/to/your/home/directory/af2
+
+# Specify where your output directory and raw data are
+outputpath=/path/to/your/home/directory/af2
+fastapath=/path/to/your/home/directory/data/1AXC.fasta
+
+# Date to specify if you want to avoid using template
+maxtemplatedate=2020-06-10
+
+source activate alphafold2.1.1
+
+# Running alphafold 2.1.1
+runaf2 -o $outputpath -f $fastapath -t $maxtemplatedate -m multimer 
+```
+
+For the purposes of this workshop we will **NOT** be submitting this batch script. However, outside of this workshop, if you'd like to submit a batch job you'd simply save the script above (e.g. runaf2.sh). You'll just need to be sure that the script ends in ".sh" to signify it is a bash script. To submit the script on the Tufts HPC cluster you'll enter the command `sbatch runaf2.sh`. Again, for the purposes of this exercise we will not be submitting this script. 
+
 _________________________________________________________________________________________________________________________________________________________________________________
 
 Next Lesson: [AlphaFold2 Output](../lesson3/lesson3.md)
