@@ -44,7 +44,7 @@ Where:
 - To get our AlphaFold data we will enter:
 
 ```
-cp -r /cluster/tufts/bio/tools/tool_examples/af2Workshop
+cp -r /cluster/tufts/bio/tools/tool_examples/af2Workshop ./
 ```
 
 - You will note that we are copying an existing directory with AlphaFold output rather than generating it. This is because depending on the protein and compute resource availability, running AlphaFold can take a few hours to over a day. At the end of this workshop will be instructions for creating a batch script to run AlphaFold. 
