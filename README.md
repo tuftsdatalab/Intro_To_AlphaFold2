@@ -1,3 +1,4 @@
+[![View on Github](https://tuftsdatalab.github.io/badges/github.svg)](https://github.com/tuftsdatalab/Intro_To_AlphaFold2)&nbsp;
 
 ## Description 
 
