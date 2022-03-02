@@ -48,15 +48,15 @@ cp -r /cluster/tufts/bio/tools/tool_examples/af2Workshop ./
 ```
 
 - You will note that we are copying an existing directory with AlphaFold output rather than generating it. This is because depending on the protein and compute resource availability, running AlphaFold can take a few hours to over a day. At the end of this workshop will be instructions for creating a batch script to run AlphaFold. 
-- Today we will examine how well AlphaFold predicted the structures of Proliferating Nuclear Cell Antigen and DNA ligase 1.
+- Today we will examine how well AlphaFold predicted the structures of Proliferating Cell Nuclear Antigen and DNA ligase 1.
 
-### Proliferating Nuclear Cell Antigen (PNCA)
+### Proliferating Cell Nuclear Antigen (PCNA)
 
-PNCA is a very well conserved protein across eukaryotes and even Archea. It acts as a processivity factor of DNA Polymerase delta, necessary for DNA replication:
+PCNA is a very well conserved protein across eukaryotes and even Archea. It acts as a processivity factor of DNA Polymerase delta, necessary for DNA replication:
 
-![](images/pncaDnaPol.PNG)
+![](images/pcnaDnaPol.PNG)
 
-Aside from DNA replication PNCA is involved in:
+Aside from DNA replication PCNA is involved in:
 
 * chromatin remodelling 
     
@@ -66,10 +66,22 @@ Aside from DNA replication PNCA is involved in:
 
 * cell cycle control
 
-It should also be noted that PNCA is a multimeric protein consisting of three monomers.
+It should also be noted that PCNA is a multimeric protein consisting of three monomers.
 
 ### DNA ligase 1 (LIG1)
 
+As evidenced by the picture above, DNA Ligase 1 is also involved in DNA replication but also DNA repair. As a part of the DNA replication machinery, DNA Ligase 1 joins Okazaki fragments during lagging strand DNA sythesis. This ligase also interacts with PCNA:
+
+![](images/lig1Pcna.PNG)
+
+Here we note that DNA ligase is a monomer consisting of the following domains:
+
+- PCNA interacting motif
+- Oligemer Binding Fold Domain
+- Adenylation Domain
+- DNA Binding Domain
+
+The contact between the PCNA interacting motif and PCNA induce a conformational change to create the DNA ligase catalytic region. 
 _________________________________________________________________________________________________________________________________________________________________________________
 
 Next: [PlaceholderText](../lesson3/lesson3.md)
