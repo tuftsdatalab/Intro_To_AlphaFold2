@@ -52,4 +52,5 @@ cp -r /cluster/tufts/bio/tools/tool_examples/af2Workshop
 _________________________________________________________________________________________________________________________________________________________________________________
 
 Next: [PlaceholderText](../lesson3/lesson3.md)
+
 Previous: [Introduction To AlphaFold](../lesson1/AlphaFold2_Tutorial.pdf)
