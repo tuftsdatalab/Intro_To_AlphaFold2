@@ -15,14 +15,22 @@ msas          ranked_2.pdb  ranking_debug.json            relaxed_model_3_multim
 ranked_0.pdb  ranked_3.pdb  relaxed_model_1_multimer.pdb  relaxed_model_4_multimer.pdb  result_model_2_multimer.pkl   result_model_5_multimer.pkl  unrelaxed_model_2_multimer.pdb  unrelaxed_model_5_multimer.pdb
  ```
  
+ Where:
+ 
+|File/Directory|Description|
+|-|-|
+|features.pkl|A pickle file w/ input feature NumPy arrays|
+|msas|A directory containing the files describing the various genetic tool hits that were used to construct the input MSA.|
+|unrelaxed_model_\*.pdb|A PDB file w/ predicted structure, exactly as outputted by the model|
+|relaxed_model_\*.pdb|A PDB file w/ predicted structure, after performing an Amber relaxation procedure on the unrelaxed structure prediction|
+|ranked_\*.pdb |A PDB file w/ relaxed predicted structures, after reordering by model confidence (using predicted LDDT (pLDDT) scores). ranked_1.pdb = highest confidence ranked_5.pdb = lowest confidence|
+|ranking_debug.json|A JSON file w/pLDDT values used to perform the model ranking, and a mapping back to the original model names.|
+|timings.json|A JSON file w/times taken to run each section of the AlphaFold pipeline.|
+|result_model_\*.pkl| A pickle file w/ a nested dictionary of the various NumPy arrays directly produced by the model: StructureModule Output, Distograms, Per-residue pLDDT scores, predicted TMscore, predicted pairwise aligned errors |
+
+We will lev
+ 
 Next: [PlaceHolderText](../lesson4/lesson4.md)
 
 Previous: [Setup](../lesson2/lesson2.md)
-
-_________________________________________________________________________________________________________________________________________________________________________________
-
-## References
-
-1. [Proliferating cell nuclear antigen (PCNA): a key factor in DNA replication and cell cycle regulation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3091797/#:~:text=Proliferating%20cell%20nuclear%20antigen%20(PCNA)%20is%20an%20evolutionarily%20well%2D,as%20well%20as%20in%20Archaea.&text=This%20protein%20was%20identified%20over,et%20al.%2C%201978).)
-2. [DNA ligase I, the replicative DNA ligase](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3881551/)
 
