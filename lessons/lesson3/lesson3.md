@@ -28,6 +28,8 @@ ranked_0.pdb  ranked_3.pdb  relaxed_model_1_multimer.pdb  relaxed_model_4_multim
 |timings.json|A JSON file w/times taken to run each section of the AlphaFold pipeline.|
 |result_model_\*.pkl| A pickle file w/ a nested dictionary of the various NumPy arrays directly produced by the model: StructureModule Output, Distograms, Per-residue pLDDT scores, predicted TMscore, predicted pairwise aligned errors |
 
+## Plotting Structure Prediction Information
+
 - We can leverage the `pkl` files to gain insight into our structure predictions. To do so we use a python script provided by the [VIB Bioinformatics Core](https://elearning.bits.vib.be/courses/alphafold/lessons/alphafold-on-the-hpc/topic/alphafold-outputs/) which we call `vizaf2.py`. First we will need to move back up one directory and load the AlphaFold module so that we have the packages needed to run our script.
 
 ```
@@ -47,7 +49,7 @@ module load alphafold/2.1.1
  - `--name` optional prefix to add to our file names
 
 ```
-python vizaf2.py --input_dir pcna/1AXC/ --ouput_dir pcna/visuals/ --name pcna
+python vizaf2.py --input_dir pcna/1AXC/ --output_dir pcna/visuals/ --name pcna
 ```
 
 - Running this will generate two images in your output directory:
@@ -65,7 +67,7 @@ python vizaf2.py --input_dir pcna/1AXC/ --ouput_dir pcna/visuals/ --name pcna
 - Now that we have these plots for the PCNA structure prediction, let's run this on the LIG1 prediction as well!
 
 ```
-python vizaf2.py --input_dir lig1/1X9N/ --ouput_dir lig1/visuals/ --name lig1
+python vizaf2.py --input_dir lig1/1X9N/ --output_dir lig1/visuals/ --name lig1
 ```
 ### lig1_coverage_LDDT.png
 
