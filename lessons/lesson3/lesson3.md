@@ -28,8 +28,27 @@ ranked_0.pdb  ranked_3.pdb  relaxed_model_1_multimer.pdb  relaxed_model_4_multim
 |timings.json|A JSON file w/times taken to run each section of the AlphaFold pipeline.|
 |result_model_\*.pkl| A pickle file w/ a nested dictionary of the various NumPy arrays directly produced by the model: StructureModule Output, Distograms, Per-residue pLDDT scores, predicted TMscore, predicted pairwise aligned errors |
 
+- We can leverage the `pkl` files to gain insight into our structure predictions. To do so we use a python script provided by the [VIB Bioinformatics Core](https://elearning.bits.vib.be/courses/alphafold/lessons/alphafold-on-the-hpc/topic/alphafold-outputs/) which we call `vizaf2.py`. First we will need to move back up one directory and load the AlphaFold module so that we have the packages needed to run our script.
 
+```
+cd ../../
+```
+```
+[tutln01@c1cmp048 1AXC]$ ls
+data  lig1  lig1af2.sh  pcna  pcnaaf2.sh  plotaf2.ipynb  vizaf2.py
+```
+```
+module load alphafold/2.1.1
+```
 
+- Now we will need to feed our script three arguments:
+ - `--input_dir` input directory with model files mentioned above
+ - `--output_dir` output directory to put our plots of model information
+ - `--name` optional prefix to add to our file names
+
+```
+python vizaf2.py --input_dir pcna/1AXC/ --ouput_dir pcna/visuals/ --name pcna
+```
  
 Next: [PlaceHolderText](../lesson4/lesson4.md)
 
