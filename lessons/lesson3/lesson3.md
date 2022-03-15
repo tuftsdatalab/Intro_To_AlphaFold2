@@ -61,7 +61,21 @@ python vizaf2.py --input_dir pcna/1AXC/ --ouput_dir pcna/visuals/ --name pcna
 ### pcna_PAE.png
 
 ![](images/pcna_PAE.png)
- 
+
+- Now that we have these plots for the PCNA structure prediction, let's run this on the LIG1 prediction as well!
+
+```
+python vizaf2.py --input_dir lig1/1X9N/ --ouput_dir lig1/visuals/ --name lig1
+```
+### lig1_coverage_LDDT.png
+
+![](images/lig1_coverage_LDDT.png)
+
+### lig1_PAE.png
+
+![](images/lig1_PAE.png)
+
+
 Next: [PlaceHolderText](../lesson4/lesson4.md)
 
 Previous: [Setup](../lesson2/lesson2.md)
