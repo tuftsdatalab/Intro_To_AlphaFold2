@@ -49,6 +49,18 @@ module load alphafold/2.1.1
 ```
 python vizaf2.py --input_dir pcna/1AXC/ --ouput_dir pcna/visuals/ --name pcna
 ```
+
+- Running this will generate two images in your output directory:
+ - `pcna_coverage_LDDT.png` - plots of your msa coverage and pLDDT scores per residue per model
+ - `pcna_PAE.png` - plots of your predicted alignment error for each of your models
+
+### pcna_coverage_LDDT.png
+
+![](images/pcna_coverage_LDDT.png)
+
+### pcna_PAE.png
+
+![](images/pcna_PAE.png)
  
 Next: [PlaceHolderText](../lesson4/lesson4.md)
 
