@@ -31,7 +31,7 @@ This course gives a high level overview of the AlphaFold 2 algorithm with the go
 - [Setup](lessons/lesson2/lesson2.md)
 - [AlphaFold2 Output](lessons/lesson3/lesson3.md)
 - [PyMOL Visualization](lessons/lesson4/lesson4.md)
-- Optional: [Writing an AlphaFold Batch Script](lessons/lesson5/lesson5.md)
+- Optional: [Writing an AlphaFold2 Batch Script](lessons/lesson5/lesson5.md)
 
 ## Acknowledgement
 
