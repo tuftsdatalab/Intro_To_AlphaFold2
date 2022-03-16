@@ -59,6 +59,5 @@ align pcna_ranked_0, 1axc
 
 _________________________________________________________________________________________________________________________________________________________
 
-Next: [PlaceHolderText](../lesson5/lesson5.md)
 
 Previous: [AlphaFold Output](../lesson3/lesson3.md)
