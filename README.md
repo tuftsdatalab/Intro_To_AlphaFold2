@@ -7,7 +7,7 @@ This course gives a high level overview of the AlphaFold 2 algorithm with the go
 
 ## Goals
 
-![](images/workflow.png)
+![](images/workflow.png=468×298)
 
 ## Prerequisites
 
