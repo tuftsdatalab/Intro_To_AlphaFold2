@@ -13,30 +13,7 @@
 |`[tutln01@login001 ~]$`|
 |-|
 
-This indicates you are logged in to the login node of the cluster.
-
-## How Should We Run AlphaFold2?
-
-Now that we are at a login node we need to get to a compute node to get our job done. For shorter jobs we can get an interactive session like so:
-
-|DO NOT RUN|
-|--|
-|`srun --pty -t 3:00:00 --mem 16G -N 1 --cpus 4 bash`|
-
-Where:
-
-|`command`|description|
-|-|-|
-|`srun`|SLURM command to run a parallel job|
-|`--pty`| get a pseudo terminal|
-|`-t` | time we need here we request 3 hours|
-|`--mem` | memory we need here we request 16 Gigabytes|
-|`-N` | number of nodes needed here we requested 1 node|
-|`--cpus` | number of CPUs needed here we requested 4|
-
-However, a program like AlphaFold might take much longer and require more memory than we can request in an interactive session like this. So to run our job we will need to write a batch script. A batch script will allow us to submit our job to a queue to be run on a compute node. The following graphic shows which solution is the best fit given the size of the job:
-
-![](images/srun_v_sbatch.PNG)
+- This indicates you are logged in to the login node of the cluster. **DO NOT** run anything from this node as it is a shared login node. To complete jobs we either need to start an interactive session to get on to a compute node (more details can be found [here](https://tufts.box.com/v/Pax-User-Guide) about this option) or we can write a batch script to submit our job to a compute node.
 
 ## Prepare the Batch Script
 
