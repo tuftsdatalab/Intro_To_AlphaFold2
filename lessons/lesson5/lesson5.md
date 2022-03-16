@@ -6,7 +6,7 @@
 - Log in with your Tufts Credentials
 - On the top menu bar choose `Clusters->Tufts HPC Shell Access`
 
-![](images/shell.PNG)
+![](../lesson2/images/shell.PNG)
 
 - You'll see a welcome message and a bash prompt, for example for user `tutln01`:
 
