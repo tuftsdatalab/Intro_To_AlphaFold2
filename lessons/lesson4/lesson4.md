@@ -16,13 +16,20 @@
 
 - Let's try on our data!
 
-## AlphaFold Output In PyMOL
+## Download AlphaFold Output
 
 - First we will need to download our predicted structure pdb files. To this go to Files > Home Directory:
 
 ![](images/homeDir.png)
 
-- Then navigate to your AlphaFold Workshop directory
+- Then navigate to your AlphaFold Workshop directory, where you will note the two folders we examined earlier that have our AlphaFold Outputs:
+
+![](images/pdbFolders.png)
+
+- In each folder you will note a `visuals` folder and an ID number. Navigate to the ID number folder and download the file "ranked_0.pdb" - this structure is AlphaFold's best prediction of the protein's structure.
+
+![](images/id.png)
+![](images/ranked0.png)
 
 Next: [PlaceHolderText](../lesson5/lesson5.md)
 
