@@ -79,7 +79,7 @@ python vizaf2.py --input_dir lig1/1X9N/ --output_dir lig1/visuals/ --name lig1
 
 _________________________________________________________________________________________________________________________________________________________
 
-Next: [PlaceHolderText](../lesson4/lesson4.md)
+Next: [PyMOL Visualization](../lesson4/lesson4.md)
 
 Previous: [Setup](../lesson2/lesson2.md)
 
