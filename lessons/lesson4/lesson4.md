@@ -31,6 +31,34 @@
 ![](images/id.png)
 ![](images/ranked0.png)
 
+- Make sure to add a prefix to each `ranked_0.pdb` file as to not confuse the two. You can rename the `ranked_0.pdb` in the `lig1` folder to `lig1_ranked_0.pdb` and the `ranked_0.pdb` in the `pcna` folder to `pcna_ranked_0.pdb`. 
+
+## AlphaFold Output In PyMOL
+
+- To visualize these protein structures in PyMOL go to File > Open - then choose your pdb files. 
+- Loading two objects can make it difficult to see examine both individually, so enter the following command to hide lig1:
+
+```
+disable lig1_ranked_0
+```
+- Now you should only see `pnca_ranked_0`. It would be interesting to see how well this prediction lines up with the know structure for PCNA. We can load that structure with the following command
+
+```
+fetch 1axc
+```
+- To see how well our predicted structure lines up we can compare the two by aligning them:
+
+```
+align pcna_ranked_0, 1axc
+```
+
+![](images/align.png)
+
+- In the history window you'll note that when we aligned our structures we were given an RMSD or root mean square deviation value. The smaller this value is, the better our two structures have aligned. 
+- Now that we have aligned the predicted PCNA structure, repeat these steps to align LIG1 (the PDB ID for LIG1 id `1x9n`).
+
+_________________________________________________________________________________________________________________________________________________________
+
 Next: [PlaceHolderText](../lesson5/lesson5.md)
 
 Previous: [AlphaFold Output](../lesson3/lesson3.md)
