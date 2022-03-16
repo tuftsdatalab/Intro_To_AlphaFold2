@@ -77,6 +77,7 @@ python vizaf2.py --input_dir lig1/1X9N/ --output_dir lig1/visuals/ --name lig1
 
 ![](images/lig1_PAE.png)
 
+_________________________________________________________________________________________________________________________________________________________
 
 Next: [PlaceHolderText](../lesson4/lesson4.md)
 
