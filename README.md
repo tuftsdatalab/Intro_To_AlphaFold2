@@ -1,8 +1,7 @@
-[![View on Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tuftsdatalab/Intro_To_AlphaFold2){:target="_blank"}
-[![View on Webpage](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)](https://tuftsdatalab.github.io/Intro_To_AlphaFold2/){:target="_blank"}
-[![On Demand Tufts HPC](images/ondemandBadge.png)](https://ondemand.pax.tufts.edu){:target="_blank"}
-[![Download PyMOL](images/pymolBadge.png)](https://pymol.org/2/){:target="_blank"}
-
+[![View on Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tuftsdatalab/Intro_To_AlphaFold2)
+[![View on Webpage](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)](https://tuftsdatalab.github.io/Intro_To_AlphaFold2/)
+[![On Demand Tufts HPC](images/ondemandBadge.png)](https://ondemand.pax.tufts.edu)
+[![Download PyMOL](images/pymolBadge.png)](https://pymol.org/2/)
 
 ## Description 
 
