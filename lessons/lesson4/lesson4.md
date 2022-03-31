@@ -57,6 +57,13 @@ align pcna_ranked_0, 1axc
 - In the history window you'll note that when we aligned our structures we were given an RMSD or root mean square deviation value. The smaller this value is, the better our two structures have aligned. 
 - Now that we have aligned the predicted PCNA structure, repeat these steps to align LIG1 (the PDB ID for LIG1 id `1x9n`).
 
+<details>
+<summary><b>Question 5: Which protein had the lowest RMSD score and why? </b></summary>
+<br>
+ LIG1 had the lowest RMSD score, likely caused by the area of low conservation in the MSA. Given how well PCNA was conserved it makes sense that it had the best alignment to its original structure.
+ </br>
+</details>
+
 _________________________________________________________________________________________________________________________________________________________
 
 Next (Optional): [Writing An AlphaFold Batch Script](../lesson5/lesson5.md)
