@@ -61,7 +61,12 @@ align pcna_ranked_0, 1axc
 <summary><b>Question 5: Which protein had the lowest RMSD score and why? </b></summary>
 <br>
  LIG1 had the lowest RMSD score, likely caused by the area of low conservation in the MSA. Given how well PCNA was conserved it makes sense that it had the best alignment to its original structure.
- </br>
+</details>
+
+<details>
+<summary><b>Question 6: Were your initial assumptions about the AlphaFold 2 prediction correct? What does this tell you about which proteins are likely to have the best prediction? </b></summary>
+<br>
+ Yes, given that LIG1 had more disordered regions it appears to have had a poorer structure prediction. AlphaFold 2 appears to work well for conserved proteins without disordered regions. 
 </details>
 
 _________________________________________________________________________________________________________________________________________________________
