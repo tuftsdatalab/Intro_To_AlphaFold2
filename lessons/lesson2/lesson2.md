@@ -82,6 +82,12 @@ Here we note that DNA ligase is a monomer consisting of the following domains:
 - DNA Binding Domain
 
 The contact between the PCNA interacting motif and PCNA induce a conformational change to create the DNA ligase catalytic region. 
+
+<details>
+<summary><b>Question 1: Which protein do you expect will have an overall more accurate prediction by AlphaFold 2? Why? </b></summary>
+<br>
+</details>
+
 _________________________________________________________________________________________________________________________________________________________________________________
 
 Next: [AlphaFold Output](../lesson3/lesson3.md)
