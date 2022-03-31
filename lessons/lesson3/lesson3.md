@@ -83,6 +83,13 @@ python vizaf2.py --input_dir lig1/1X9N/ --output_dir lig1/visuals/ --name lig1
  PCNA seems to have the most consistent coverage throughout all residues
  </br>
 </details>
+
+<details>
+<summary><b>Question 3: For the protein that has the least consistent coverage, discuss why that might be and what domain on that protein is poorly covered? </b></summary>
+<br>
+ LIG1 has the lease consistent coverage and it appears that the PCNA binding domain has the lease consistent coverage.
+ </br>
+</details>
 _________________________________________________________________________________________________________________________________________________________
 
 Next: [PyMOL Visualization](../lesson4/lesson4.md)
