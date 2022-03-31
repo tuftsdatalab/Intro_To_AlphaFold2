@@ -60,7 +60,7 @@ align pcna_ranked_0, 1axc
 <details>
 <summary><b>Question 5: Which protein had the lowest RMSD score and why? </b></summary>
 <br>
- LIG1 had the lowest RMSD score, likely caused by the area of low conservation in the MSA. Given how well PCNA was conserved it makes sense that it had the best alignment to its original structure.
+ LIG1 had the highest RMSD score, likely caused by the area of low conservation in the MSA. Given how well PCNA was conserved it makes sense that it had the best alignment to its original structure.
 </details>
 
 <details>
