@@ -10,8 +10,9 @@
 
 - You'll see a welcome message and a bash prompt, for example for user `tutln01`:
 
-|`[tutln01@login001 ~]$`|
-|-|
+```
+[tutln01@login001 ~]$
+```
 
 - This indicates you are logged in to the login node of the cluster. **DO NOT** run anything from this node as it is a shared login node. To complete jobs we either need to start an interactive session to get on to a compute node (more details can be found [here](https://tufts.box.com/v/Pax-User-Guide) about this option) or we can write a batch script to submit our job to a compute node.
 
@@ -31,6 +32,7 @@ A batch script can be broken into two parts - the header section with informatio
 #SBATCH --gres=gpu:1  
 #SBATCH --exclude=c1cmp[025-026] 
 ```
+
 The `#SBATCH` commands above do the following:
 
 |`command`|description|
