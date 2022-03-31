@@ -86,6 +86,8 @@ The contact between the PCNA interacting motif and PCNA induce a conformational 
 <details>
 <summary><b>Question 1: Which protein do you expect will have an overall more accurate prediction by AlphaFold 2? Why? </b></summary>
 <br>
+    Given that conservation aids AlphaFold's prediction accuracy, PCNA seems to have the better chance of having a more accurate structure prediction. Additionally, LIG1 contains disordered regions, like the PCNA domain which may impact structure prediction.
+    </br>
 </details>
 
 _________________________________________________________________________________________________________________________________________________________________________________
