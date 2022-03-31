@@ -81,21 +81,18 @@ python vizaf2.py --input_dir lig1/1X9N/ --output_dir lig1/visuals/ --name lig1
 <summary><b>Question 2: Given the MSA plots above, which protein seems to have more consistent coverage? </b></summary>
 <br>
  PCNA seems to have the most consistent coverage throughout all residues
- </br>
 </details>
 
 <details>
 <summary><b>Question 3: For the protein that has the least consistent coverage, discuss why that might be and what domain on that protein is poorly covered? </b></summary>
 <br>
  LIG1 has the lease consistent coverage and it appears that the PCNA binding domain has the lease consistent coverage.
- </br>
 </details>
 
 <details>
 <summary><b>Question 4: The PAE plots, or predicted alignment error, show the expected distance error when one residue is aligned to another. Explain each protein's PAE plots. Do you see any patterns or areas of high area? Why might that be?</b></summary>
 <br>
  The PAE plot for PCNA show three distinct areas of low alignment error which indicate. These dark patches are most likely caused by the fact that this is a multimer. The residues within the each monomer align better than the residues between monomers. As for LIG1, we see a consitent low error region and a series of residues with high error. This high error region appears to be the PCNA binding domain which had poor representation in the MSA plot.
- </br>
 </details>
 
 ________________________________________________________________________________________________________________________________________________________
