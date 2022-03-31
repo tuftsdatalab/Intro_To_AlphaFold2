@@ -77,6 +77,12 @@ python vizaf2.py --input_dir lig1/1X9N/ --output_dir lig1/visuals/ --name lig1
 
 ![](images/lig1_PAE.png)
 
+<details>
+<summary><b>Question 2: Given the MSA plots above, which protein seems to have more consistent coverage? </b></summary>
+<br>
+ PCNA seems to have the most consistent coverage throughout all residues
+ </br>
+</details>
 _________________________________________________________________________________________________________________________________________________________
 
 Next: [PyMOL Visualization](../lesson4/lesson4.md)
