@@ -10,3 +10,5 @@ relative_links:
 include:
   - README.md
   - lessons/
+
+theme: jekyll-theme-cayman
