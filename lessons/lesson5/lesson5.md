@@ -1,5 +1,3 @@
-30 minutes
-
 ## Log into the HPC cluster’s On Demand Interface
 
 - Open a Chrome browser and go to [On Demand](https://ondemand.pax.tufts.edu/)
