@@ -108,4 +108,4 @@ ________________________________________________________________________________
 
 Previous: [PyMOL Visualization](../lesson4/lesson4.md)
 
-[Back to the Beginning](../../README.md)
+[Main Page](../../README.md)
