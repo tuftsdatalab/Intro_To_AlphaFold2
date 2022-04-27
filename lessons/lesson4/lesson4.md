@@ -75,3 +75,4 @@ Next (Optional): [Writing An AlphaFold Batch Script](../lesson5/lesson5.md)
 
 Previous: [AlphaFold Output](../lesson3/lesson3.md)
 
+[Main Page](../../README.md)
