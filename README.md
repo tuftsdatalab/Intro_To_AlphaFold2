@@ -35,3 +35,5 @@ This course gives a high level overview of the AlphaFold 2 algorithm with the go
 ## Acknowledgement
 
 Much of this course has been adapted from the [VIB Bioinformatics Core AlphaFold2 Tutorial](https://elearning.bits.vib.be/courses/alphafold/). We would also like to thank the [Oxford Protein Informatics Group](https://www.blopig.com/blog/2021/07/alphafold-2-is-here-whats-behind-the-structure-prediction-miracle/) for their digestible take on the AlphaFold2 algorithm.
+
+#### [Back To All Workshops](https://tuftsdatalab.github.io/Research_Technology_Bioinformatics/)
